@@ -12,12 +12,17 @@
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
-    "assetBundlePatterns": ["**/*"],
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "plugins": [
       [
         "./plugins/withAndroidShareExtension/index",
         {
-          "androidIntentFilters": ["text/*", "image/*"]
+          "androidIntentFilters": [
+            "text/*",
+            "image/*"
+          ]
         }
       ],
       [
@@ -48,8 +53,30 @@
     },
     "extra": {
       "eas": {
-        "projectId": "xxx-xxx-xxx-xxx-xxx"
+        "projectId": "78985c29-cdf9-4c8b-ada9-ff40e7a40d07",
+        "build": {
+          "experimental": {
+            "ios": {
+              "appExtensions": [
+                {
+                  "targetName": "ShareExtension",
+                  "bundleIdentifier": "com.example.exposhareintentdemo.share-extension",
+                  "entitlements": {
+                    "com.apple.security.application-groups": [
+                      "group.com.example.exposhareintentdemo"
+                    ]
+                  }
+                },
+                {
+                  "targetName": "ShareExtension",
+                  "bundleIdentifier": "com.example.exposhareintentdemo.share-extension"
+                }
+              ]
+            }
+          }
+        }
       }
-    }
+    },
+    "owner": "pax2678"
   }
 }

@@ -8,8 +8,8 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      {!shareIntent && <Text>No Share intent detected</Text>}
-      {!!shareIntent && <Text style={styles.gap}>Share intent value:</Text>}
+      {!shareIntent && <Text>No Share intent detected OK!! :</Text>}
+      {!!shareIntent && <Text style={styles.gap}>Share intent value is:</Text>}
       {!!shareIntent && !shareIntent.uri && (
         <Text style={styles.gap}>{JSON.stringify(shareIntent)}</Text>
       )}

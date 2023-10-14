@@ -5,12 +5,24 @@
   "build": {
     "development": {
       "developmentClient": true,
-      "distribution": "internal"
+      "extends": "production",
+      "android": {
+        "buildType": "apk"
+      }
     },
-    "preview": {
-      "distribution": "internal"
+    "preview2": {
+      "extends": "production",
+      "android": {
+        "gradleCommand": ":app:assembleRelease"
+      }
     },
-    "production": {}
+    "preview3": {
+      "extends": "production",
+      "developmentClient": true
+    },
+    "production": {
+      "node": "14.18.0"
+    }
   },
   "submit": {
     "production": {}
